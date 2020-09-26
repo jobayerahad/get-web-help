@@ -1,0 +1,62 @@
+.btn {
+  background: none;
+  text-decoration: none;
+  letter-spacing: 1px;
+  width: max-content;
+  height: max-content;
+
+  &,
+  &:link,
+  &:visited {
+    display: inline-block;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+
+    transition: all 0.2s;
+
+    // Change for the <button> element
+    border: none;
+    cursor: pointer;
+  }
+
+  &:hover {
+    color: $color-primary;
+  }
+
+  &--text {
+    i {
+      color: $color-primary;
+      transition: 0.2s;
+    }
+
+    &:hover i {
+      margin-left: 5px;
+    }
+  }
+
+  &--icon-filled {
+    width: 5rem;
+    height: 5rem;
+    background-color: $color-primary;
+
+    i {
+      color: #ffffff;
+    }
+
+    &:hover {
+      background-color: $color-grey-dark-1;
+    }
+  }
+
+  &--regular {
+    color: $color-grey-dark-1;
+    border: 1px solid $color-grey-dark-1;
+    border-radius: 5px;
+    padding: 1rem 5rem;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $color-grey-dark-1;
+    }
+  }
+}

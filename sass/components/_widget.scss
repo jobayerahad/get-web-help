@@ -1,0 +1,109 @@
+.widget {
+  margin-bottom: 5rem;
+
+  @include respond(tab_port) {
+    max-width: 40rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+  }
+
+  &-about {
+    &__thumbnail {
+      width: 20rem;
+      height: 20rem;
+      margin: 0 auto;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    &__text {
+      color: $color-grey-dark-2;
+      line-height: 1.4;
+      letter-spacing: 0.5px;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+  }
+
+  &-social {
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+
+    &__item {
+      i {
+        font-size: 1.3rem;
+        transition: 0.2s;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+  }
+
+  &-posts {
+    &__container {
+      display: flex;
+
+      & > * {
+        margin-bottom: 5rem;
+      }
+    }
+
+    &__thumbnail {
+      margin-right: 3rem;
+      margin-bottom: 2.5rem;
+
+      img {
+        width: 10rem;
+        height: 10rem;
+      }
+    }
+  }
+
+  &-newsletter {
+    &__container {
+      display: flex;
+
+      input {
+        flex: 1;
+      }
+    }
+  }
+
+  &-archives {
+    &__item {
+      letter-spacing: 1px;
+      color: $color-grey-dark-1;
+      font-size: 1.6rem;
+      padding: 1.5rem 0;
+      transition: 0.2s;
+
+      a {
+        display: flex;
+        align-items: center;
+      }
+
+      i {
+        font-size: 0.7rem;
+        margin-right: 1rem;
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+
+      &:not(:last-child) {
+        border-bottom: 1px solid $color-grey-light-3;
+      }
+    }
+  }
+}

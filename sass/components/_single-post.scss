@@ -1,0 +1,36 @@
+.single-post {
+  &__container {
+    display: flex;
+
+    @include respond(phone) {
+      flex-direction: column;
+    }
+
+    & > * {
+      width: 50%;
+
+      @include respond(phone) {
+        width: 100%;
+
+        &:not(:last-child) {
+          margin-bottom: 3rem;
+        }
+      }
+    }
+  }
+
+  &__thumbnail {
+    margin-right: 3rem;
+    height: 30rem;
+
+    @include respond(phone) {
+      height: 40rem;
+    }
+  }
+
+  &__curve {
+    width: 766px;
+    height: 8px;
+    margin-bottom: 5rem;
+  }
+}

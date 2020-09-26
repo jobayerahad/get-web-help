@@ -1,0 +1,63 @@
+.contact {
+  box-shadow: 0 5px 3rem rgba($color: #000000, $alpha: 0.15);
+  padding: 8%;
+
+  & > *:not(:last-child) {
+    margin-right: 5rem;
+  }
+
+  &__heading {
+    font-family: $font-secondary;
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $color-grey-dark-1;
+  }
+
+  &__form {
+    &--input {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+
+      & > *:not(:last-child) {
+        margin-right: 2rem;
+      }
+
+      @include respond(phone) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+
+    &--textarea {
+      width: 100%;
+      height: 12rem;
+    }
+
+    & > *:not(:last-child) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__info {
+    color: $color-grey-dark-2;
+    font-size: 1.4rem;
+
+    & i {
+      color: $color-grey-dark-1;
+      margin-right: 2rem;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__social {
+    margin-top: 5rem;
+
+    @include respond(tab_port) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,47 @@
+.dropdown {
+  display: none;
+  position: absolute;
+  padding-top: 4.5rem;
+  top: 0;
+  left: -10vw;
+  width: 35vw;
+  z-index: 10;
+  transition: all 0.2s;
+  animation: moveInBottom 0.2s ease-out forwards;
+
+  @include respond(tab_land) {
+    min-width: 50rem;
+  }
+
+  @include respond(phone) {
+    width: max-content;
+  }
+
+  &__list {
+    background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),
+      url(https://images.unsplash.com/photo-1592813692910-af03b039c36a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1225&q=80);
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: 0.1);
+    padding: 2rem 0 1rem 3rem;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include respond(phone) {
+      display: block;
+      padding: 2rem 3rem;
+      width: max-content;
+    }
+  }
+
+  &__item {
+    margin-bottom: 2rem;
+    color: #000000;
+    transition: 0.2s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}

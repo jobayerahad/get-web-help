@@ -1,0 +1,18 @@
+.social {
+  display: flex;
+
+  &__item {
+    i {
+      font-size: 1.3rem;
+      transition: 0.2s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

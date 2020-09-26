@@ -1,0 +1,32 @@
+.full-post {
+  &__thumbnail {
+    height: 45rem;
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__share {
+    flex-shrink: 0;
+    font-size: 1.5rem;
+
+    span {
+      font-family: $font-secondary;
+    }
+
+    a {
+      transition: 0.2s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    & > *:not(:last-child) {
+      margin-right: 2rem;
+    }
+  }
+}

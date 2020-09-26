@@ -1,0 +1,47 @@
+.footer {
+  margin-top: 5rem;
+
+  &__social {
+    padding: 3rem 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      transition: 0.2s;
+
+      & span {
+        margin-left: 1rem;
+
+        @include respond(tab_port) {
+          display: none;
+        }
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__copyright {
+    letter-spacing: 0.5px;
+    padding: 2rem 0;
+    text-align: center;
+    font-size: 1.4rem;
+    color: $color-grey-dark-3;
+
+    &__text a {
+      transition: 0.2s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}

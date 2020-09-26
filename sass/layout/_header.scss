@@ -1,0 +1,55 @@
+.header {
+  &__top {
+    box-shadow: 0 0.5rem 0.5rem rgba($color: #000000, $alpha: 0.1);
+    padding: 2rem 0;
+
+    & > div {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__logo {
+    @include flexCenter;
+    margin-top: 3rem;
+
+    img {
+      width: 14rem;
+      height: auto;
+    }
+  }
+
+  &__navigation {
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+
+    &__list {
+      margin: 3rem 0;
+      @include flexCenter;
+    }
+
+    &__item {
+      position: relative;
+      transition: 0.2s;
+
+      &--active {
+        padding: 1rem 2rem;
+        background-color: $color-grey-light-1;
+        border-radius: 1rem;
+      }
+
+      &:hover {
+        color: $color-primary;
+
+        & .dropdown {
+          display: block;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 4rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+.pagination {
+  color: $color-grey-dark-2;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  & > * {
+    padding: 1rem;
+    border-radius: 50%;
+    transition: 0.2s;
+
+    &:not(:last-child) {
+      margin-right: 3rem;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  & > .prev,
+  & > .next {
+    padding: 1rem 1.5rem;
+    border: 1px solid $color-grey-dark-3;
+    border-radius: 0 !important;
+  }
+
+  & > .current {
+    color: $color-grey-light-1;
+    background-color: $color-grey-light-4;
+
+    &:hover {
+      color: $color-grey-light-1;
+    }
+  }
+}

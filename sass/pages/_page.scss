@@ -1,0 +1,36 @@
+.pages {
+  width: 90rem;
+  margin: 0 auto;
+
+  @include respond(tab_port) {
+    width: 55rem;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    margin: 2rem auto;
+  }
+
+  &__heading {
+    h2 {
+      font-family: $font-secondary;
+      text-align: center;
+      font-size: 2.5rem;
+      letter-spacing: 1px;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__thumbnail {
+    height: 50rem;
+    margin-bottom: 3rem;
+
+    @include respond(tab_port) {
+      height: 40rem;
+    }
+
+    @include respond(phone) {
+      height: 30rem;
+    }
+  }
+}

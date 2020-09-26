@@ -1,0 +1,19 @@
+.container {
+  width: 100rem;
+  margin: 0 auto;
+
+  @include respond(tab_port) {
+    width: 100%;
+    padding: 0 5rem;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+    padding: 0 3rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}

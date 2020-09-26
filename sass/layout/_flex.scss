@@ -1,0 +1,40 @@
+.flex {
+  display: flex;
+
+  @include respond(tab_port) {
+    flex-direction: column;
+  }
+
+  &__half {
+    width: 50%;
+
+    @include respond(tab_port) {
+      &:not(:last-child) {
+        margin-bottom: 3rem;
+      }
+
+      width: 100%;
+    }
+  }
+
+  &__one-of-three {
+    width: 33%;
+
+    @include respond(tab_port) {
+      width: 100%;
+    }
+  }
+
+  &__two-of-three {
+    width: 67%;
+
+    @include respond(tab_port) {
+      width: 100%;
+    }
+  }
+
+  &--center {
+    justify-content: center;
+    align-items: center;
+  }
+}

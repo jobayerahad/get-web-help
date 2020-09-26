@@ -1,0 +1,57 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1 rem is
+  font-size: 62.5%; // 1 rem = 10px; 10px/16px = 62.5%
+
+  @include respond(phone) {
+    font-size: 43.75%; // 1 rem = 7px; 7px/16px = 43.75%
+  }
+
+  @include respond(tab_port) {
+    font-size: 50%; // 1 rem = 8px; 8px/16px = 50%
+  }
+
+  @include respond(tab_land) {
+    font-size: 56.25%; // 1 rem = 9px; 9px/16px = 56.25%
+  }
+
+  @include respond(large_scr) {
+    font-size: 68.75%; // 1 rem = 11px; 11px/16px = 68.75%
+  }
+}
+
+body {
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}

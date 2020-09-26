@@ -1,0 +1,88 @@
+.post {
+  &-title {
+    font-family: $font-secondary;
+    line-height: 1.5;
+
+    & > * {
+      margin-bottom: 1.5rem;
+      transition: 0.2s;
+    }
+
+    &:hover {
+      color: $color-primary;
+    }
+
+    h3 {
+      font-size: 3.5rem;
+    }
+
+    h4 {
+      font-size: 2.5rem;
+    }
+
+    h5 {
+      font-size: 2rem;
+    }
+  }
+
+  &-date {
+    margin-bottom: 1.5rem;
+    color: $color-primary;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-size: 1.4rem;
+  }
+
+  &-category {
+    font-size: 1.5rem;
+    font-style: italic;
+
+    span {
+      color: $color-grey-dark-3;
+    }
+  }
+
+  &-meta {
+    display: flex;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+
+    & > * {
+      margin-right: 2rem;
+    }
+
+    a {
+      color: $color-grey-dark-3;
+    }
+
+    span {
+      text-transform: capitalize;
+      color: $color-grey-dark-1;
+      transition: 0.2s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      display: inline-block;
+      margin: 0.5rem;
+      border: 1px solid #ebebeb;
+      padding: 1rem 1.5rem;
+      text-transform: uppercase;
+      font-size: 1.4rem;
+      color: $color-grey-dark-1;
+      transition: 0.2s;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+}
